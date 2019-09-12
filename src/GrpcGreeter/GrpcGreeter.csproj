@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Protobuf Include="Protos\greet.proto" GrpcServices="Server" />
+    <None Remove="Protos\greet.proto" />
   </ItemGroup>
   
   <ItemGroup>
@@ -29,6 +29,16 @@
   
   <ItemGroup>
     <ProjectReference Include="..\Serilog.Enrichers.Correlation\Serilog.Enrichers.Correlation.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Protos\" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Protobuf Include="..\protos\greet.proto" GrpcServices="Server">
+      <Link>Protos\greet.proto</Link>
+    </Protobuf>
   </ItemGroup>
 
 </Project>
