@@ -10,3 +10,11 @@ ps> docker-compose -f docker-compose.yml up
 ```
 
 EXPOSED:  https://localhost:4701
+
+```
+Microsoft Visual Studio Enterprise 2019 Preview
+Version 16.3.0 Preview 3.0
+VisualStudio.16.Preview/16.3.0-pre.3.0+29230.61
+Microsoft .NET Framework
+Version 4.8.03752
+```
