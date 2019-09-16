@@ -18,3 +18,10 @@ VisualStudio.16.Preview/16.3.0-pre.3.0+29230.61
 Microsoft .NET Framework
 Version 4.8.03752
 ```
+
+# INSECURE
+
+Calling gRPC from inside docker-compose or kubernetes is all over http, so the following needs to be set for those calls to succeed.
+
+// This switch must be set before creating the GrpcChannel/HttpClient.
+AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
