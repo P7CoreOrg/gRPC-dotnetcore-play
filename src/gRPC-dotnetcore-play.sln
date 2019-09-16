@@ -13,7 +13,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestServerFixture3", "TestS
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{4A4EB7F5-C998-4620-A308-B6FD2C24678C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTest_GrpcGreeterService", "XUnitTest_GrpcGreeterService\XUnitTest_GrpcGreeterService.csproj", "{3020DA21-5618-4386-B289-359A6DD98EAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitTest_GrpcGreeterService", "XUnitTest_GrpcGreeterService\XUnitTest_GrpcGreeterService.csproj", "{3020DA21-5618-4386-B289-359A6DD98EAB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{E05FEC9A-9915-436F-BF1A-6B8DF1E72675}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		.env = .env
+		build.ps1 = build.ps1
+		docker-compose.yml = docker-compose.yml
+		Dockerfile = Dockerfile
+		make-cert.ps1 = make-cert.ps1
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

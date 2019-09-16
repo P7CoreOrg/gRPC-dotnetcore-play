@@ -15,8 +15,16 @@ namespace GrpcGreeterClient
                               new HelloRequest { Name = "GreeterClient" });
             Console.WriteLine("Greeting: " + reply.Message);
 
-            reply = await client.SayHelloThrowAsync(
-                             new HelloRequest { Name = "GreeterClient" });
+            try
+            {
+                reply = await client.SayHelloThrowAsync(
+                           new HelloRequest { Name = "GreeterClient" });
+            }
+            catch (Grpc.Core.RpcException ex)
+            {
+                Console.WriteLine("Exception: " + ex.Message);
+            }
+          
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
         }

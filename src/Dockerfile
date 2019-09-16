@@ -13,4 +13,5 @@ RUN find -type d -name bin -prune -exec rm -rf {} \; && find -type d -name obj -
 RUN dotnet restore
 
 RUN dotnet build   -c Release --no-restore -p:Version=$Version
+RUN dotnet test   -c Release --no-restore -p:Version=$Version
 RUN dotnet pack    -c Release --no-restore --no-build -p:Version=$Version -o "./dist/pack"
