@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.10.0-rc1" />
+    <PackageReference Include="Grpc.AspNetCore.Server" Version="0.2.23-pre2" />
+    <PackageReference Include="Grpc.Reflection" Version="2.24.0-pre1" />
+    <PackageReference Include="Microsoft.AspNetCore.Routing" Version="2.2.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.0.0-rc1.19456.10" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.0.0-rc1.19456.10" />
+  </ItemGroup>
+
+</Project>

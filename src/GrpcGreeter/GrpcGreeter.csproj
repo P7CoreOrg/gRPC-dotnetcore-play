@@ -11,6 +11,7 @@
   
   <ItemGroup>
     <PackageReference Include="CorrelationId" Version="2.1.0" />
+    <PackageReference Include="Grpc.Reflection" Version="2.24.0-pre1" />
     <PackageReference Include="Sentry.AspNetCore" Version="2.0.0-beta4" />
     <PackageReference Include="Sentry.Serilog" Version="2.0.0-beta4" />
     <PackageReference Include="Serilog.AspNetCore" Version="3.0.1-dev-00099" />
@@ -28,6 +29,7 @@
   </ItemGroup>
   
   <ItemGroup>
+    <ProjectReference Include="..\Grpc.AspNetCore.Server.Reflection\Grpc.AspNetCore.Server.Reflection.csproj" />
     <ProjectReference Include="..\Serilog.Enrichers.Correlation\Serilog.Enrichers.Correlation.csproj" />
   </ItemGroup>
   
