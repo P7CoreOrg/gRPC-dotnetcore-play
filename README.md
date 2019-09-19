@@ -23,7 +23,7 @@ Version 4.8.03752
 
 Calling gRPC from inside docker-compose or kubernetes is all over http, so the following needs to be set for those calls to succeed.
 
-// This switch must be set before creating the GrpcChannel/HttpClient.
+// This switch must be set before creating the GrpcChannel/HttpClient.  
 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
 
 [ms docs](https://docs.microsoft.com/en-us/aspnet/core/grpc/troubleshoot?view=aspnetcore-3.0#call-insecure-grpc-services-with-net-core-client)  
