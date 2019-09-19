@@ -38,7 +38,7 @@ function Check {
 }
 
 $DockerOS = docker version -f "{{ .Server.Os }}"
-$ImageName = "dotnetcore/p7core-grpc"
+$ImageName = "grpc-dotnetcore-play-base-build"
 $Dockerfile = "Dockerfile"
 
 $Version = "0.0.3"
@@ -50,7 +50,7 @@ docker build --no-cache --pull -t $ImageName -f $Dockerfile --build-arg Version=
 PrintElapsedTime
 Check "docker build (application)"
 
-docker build -f ./GrpcGreeter/Dockerfile -t dotnetcore/p7core-grpc-greeter-service .
+docker build -f ./GrpcGreeter/Dockerfile --build-arg build_image=$ImageName -t dotnetcore/p7core-grpc-greeter-service .
 # docker build -f ./ClientConfigurationService/Dockerfile -t dotnetcore/clientconfigurationservice .
 # docker build -f ./TokenExchangeTrusedContainer/Dockerfile -t dotnetcore/tokenexchangetrusedcontainer .
 
