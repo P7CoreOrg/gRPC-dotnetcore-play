@@ -12,3 +12,6 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build the Docker image
       run: docker build ./src/ --file src/Dockerfile --tag grpc-dotnetcore-play-base-build:$(date +%s)
+
+    - name: Build final
+      run: docker build ./src/ --file src/Dockerfile --build-arg build_image=grpc-dotnetcore-play-base-build:$(date +%s) --tag p7core-grpc-greeter-service:$(date +%s)
