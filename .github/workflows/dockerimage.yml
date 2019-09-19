@@ -15,3 +15,8 @@ jobs:
 
     - name: Build GrpcGreeter
       run: docker build ./src/ --file src/GrpcGreeter/Dockerfile --build-arg build_image=grpc-dotnetcore-play-base-build --tag p7core-grpc-greeter-service:$(date +%s)
+    
+    - name: docker login
+      run: docker login --username ${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_PASSWORD }}
+     
+    
