@@ -10,6 +10,18 @@ jobs:
  
     steps:
     - uses: actions/checkout@v1
+    
+    - name: Define variables
+        run: echo "Tags are > ${TAG1}"
+        env:
+          TAG1: $(date +%s)
+    
+    - name: Echo variables
+        run: echo "Tags are > ${TAG1}"
+    
+    - name: Echo variables
+        run: echo "Tags are > ${TAG1}"
+        
     - name: Build the Docker image
       run: docker build ./src/ --file src/Dockerfile --tag grpc-dotnetcore-play-base-build
 
