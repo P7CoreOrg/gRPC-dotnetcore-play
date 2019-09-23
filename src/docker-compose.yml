@@ -1,7 +1,7 @@
 version: '3.7'
 services:
 
-  tokenexchangetrusedcontainer-service:
+  p7core-grpc-greeter-service:
     image: dotnetcore/p7core-grpc-greeter-service
     build: GrpcGreeter
 
