@@ -25,7 +25,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{E0
 		make-cert.ps1 = make-cert.ps1
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grpc.AspNetCore.Server.Reflection", "Grpc.AspNetCore.Server.Reflection\Grpc.AspNetCore.Server.Reflection.csproj", "{B6996EB3-BBA0-4141-9B9F-AFB2A091A40C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grpc.AspNetCore.Server.Reflection", "Grpc.AspNetCore.Server.Reflection\Grpc.AspNetCore.Server.Reflection.csproj", "{B6996EB3-BBA0-4141-9B9F-AFB2A091A40C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcGreeter-withAuth", "GrpcGreeter-withAuth\GrpcGreeter-withAuth.csproj", "{43F28354-5F70-4FC1-9924-6613E8AC025D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{B6996EB3-BBA0-4141-9B9F-AFB2A091A40C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6996EB3-BBA0-4141-9B9F-AFB2A091A40C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6996EB3-BBA0-4141-9B9F-AFB2A091A40C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43F28354-5F70-4FC1-9924-6613E8AC025D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43F28354-5F70-4FC1-9924-6613E8AC025D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43F28354-5F70-4FC1-9924-6613E8AC025D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43F28354-5F70-4FC1-9924-6613E8AC025D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,11 +8,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.Enrichers.Correlation;
 
-namespace GrpcGreeter
+namespace GrpcGreeter_withAuth
 {
     public class Startup
     {
@@ -42,7 +43,7 @@ namespace GrpcGreeter
                 UpdateTraceIdentifier = false
             });
 
-         
+
             Log.Logger = new LoggerConfiguration()
                  .ReadFrom.Configuration(Configuration)
                  .Enrich.WithCorrelationHttpContext(provider)
@@ -54,12 +55,14 @@ namespace GrpcGreeter
             var logger = loggerFactory.CreateLogger("ClientConfigurationService.Startup");
             logger.LogInformation("Configuring App");
 
-            if (env.EnvironmentName == "Development")
+            if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseRouting();
 
+            app.UseRouting();
+            app.UseAuthentication();
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 // Communication with gRPC endpoints must be made through a gRPC client.
@@ -72,6 +75,7 @@ namespace GrpcGreeter
                 });
             });
             logger.LogInformation("Ready to go!");
+
         }
     }
 }

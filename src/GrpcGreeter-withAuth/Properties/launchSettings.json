@@ -1,0 +1,12 @@
+﻿{
+  "profiles": {
+    "GrpcGreeter-withAuth": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "applicationUrl": "https://localhost:4731;http://localhost:4730",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
