@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -32,8 +34,17 @@ namespace GrpcGreeter
                 {
                     webBuilder.UseStartup<Startup>()
                     .UseSerilog()
-                    .UseSentry();
+                    .UseSentry()
+                    .ConfigureKestrel(options =>
+                     {
+                         options.ConfigureEndpointDefaults(listenOptions =>
+                         {
+                             listenOptions.Protocols = HttpProtocols.Http2;
+                         });
+                     });
                 });
+            
+
         public static void LoadConfigurations(IConfigurationBuilder config, string environmentName)
         {
             config

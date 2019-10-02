@@ -1,12 +1,13 @@
-﻿{
+{
   "profiles": {
     "GrpcGreeter-withAuth": {
       "commandName": "Project",
-      "launchBrowser": false,
-      "applicationUrl": "https://localhost:4731;http://localhost:4730",
+      "launchBrowser": true,
+      "launchUrl": "https://localhost:4731/generateJwtToken?name=dog",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "applicationUrl": "https://localhost:4731;http://localhost:4730"
     }
   }
 }
